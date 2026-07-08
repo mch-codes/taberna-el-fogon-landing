@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
+import JsonLd from '@/components/JsonLd'
 import './globals.css'
 
 const inter = Inter({
@@ -25,7 +26,11 @@ export const metadata: Metadata = {
     description,
     locale: 'es_ES',
     type: 'website',
-    images: ['/images/hero-taberna.svg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
   },
   icons: {
     icon: '/favicon.svg',
@@ -39,7 +44,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+      <body>
+        <JsonLd />
+        {children}
+      </body>
     </html>
   )
 }

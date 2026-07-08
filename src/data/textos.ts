@@ -29,6 +29,7 @@ interface Textos {
     tituloAcento: string
     desc: string
     ctaReservar: string
+    ctaWhatsapp: string
     ctaCarta: string
   }
   carta: {
@@ -57,6 +58,7 @@ interface Textos {
     horario: string[]
     terrazaLabel: string
     terraza: string
+    abrirMapa: string
   }
   footer: {
     desc: string
@@ -66,25 +68,47 @@ interface Textos {
     horarioTitulo: string
     horario: string[]
     aviso: string
+    ctaReservar: string
+    ctaWhatsapp: string
   }
   sticky: {
     reservar: string
   }
 }
 
-export const RESERVA_URL = 'https://covermanager.com/placeholder'
+/**
+ * Datos de contacto del negocio, única fuente de verdad (ver DATOS.md).
+ * No hardcodear teléfono ni enlaces de WhatsApp/reserva en componentes.
+ */
+export const NEGOCIO = {
+  nombre: 'Taberna El Fogón',
+  telefonoDisplay: '911 22 33 44',
+  telUrl: 'tel:911223344',
+  whatsappUrl: 'https://wa.me/34911223344',
+  telefonoSchema: '+34 911 22 33 44',
+  email: 'hola@tabernaelfogon.es',
+  direccion: {
+    calle: 'Calle de la Cava Baja, 22',
+    codigoPostal: '28005',
+    ciudad: 'Madrid',
+    pais: 'ES',
+  },
+  mapsUrl:
+    'https://www.google.com/maps/search/?api=1&query=Calle+de+la+Cava+Baja+22%2C+28005+Madrid',
+}
 
 export const textos: Record<Lang, Textos> = {
   es: {
     header: {
-      reservar: 'Reservar',
+      reservar: 'Reservar por teléfono',
     },
     hero: {
       badge: 'Taberna castellana en La Latina',
       titulo: 'Cocina castellana',
       tituloAcento: 'en el corazón de La Latina',
       desc: 'Doce años sirviendo guisos, asados y torreznos como los de casa, en una taberna con solera en pleno barrio de La Latina.',
-      ctaReservar: 'Reservar mesa',
+      ctaReservar: 'Reservar por teléfono',
+      ctaWhatsapp: 'Escríbenos por WhatsApp',
       ctaCarta: 'Ver la carta',
     },
     carta: {
@@ -201,7 +225,7 @@ export const textos: Record<Lang, Textos> = {
     },
     resenas: {
       titulo: 'Lo que dicen de nosotros',
-      subtitulo: 'Reseñas reales de clientes en Google',
+      subtitulo: 'Lo que dicen nuestros clientes',
       items: [
         {
           nombre: 'Marisa G.',
@@ -234,14 +258,11 @@ export const textos: Record<Lang, Textos> = {
       metroLabel: 'Cómo llegar',
       metro: 'Metro La Latina (Línea 5), a 3 min andando',
       horarioLabel: 'Horario',
-      horario: [
-        'Martes a domingo: 12:30 - 16:30',
-        'Martes a domingo: 20:00 - 23:30',
-        'Lunes cerrado',
-      ],
+      horario: ['Martes a domingo: 12:30–16:30 y 20:00–23:30', 'Lunes cerrado'],
       terrazaLabel: 'Terraza',
       terraza:
         'Contamos con terraza en la calle, ideal para comer o cenar al aire libre en temporada.',
+      abrirMapa: 'Abrir en Google Maps',
     },
     footer: {
       desc: 'Taberna castellana en La Latina, Madrid.',
@@ -249,24 +270,27 @@ export const textos: Record<Lang, Textos> = {
       email: 'hola@tabernaelfogon.es',
       instagram: '@tabernaelfogon',
       horarioTitulo: 'Horario',
-      horario: ['M-D 12:30-16:30 y 20:00-23:30', 'Lunes cerrado'],
+      horario: ['Martes a domingo: 12:30–16:30 y 20:00–23:30', 'Lunes cerrado'],
       aviso:
         'Sitio ficticio de portfolio, negocio ficticio con fines de demostración.',
+      ctaReservar: 'Reservar por teléfono',
+      ctaWhatsapp: 'WhatsApp',
     },
     sticky: {
-      reservar: 'Reservar mesa',
+      reservar: 'Reservar por teléfono',
     },
   },
   en: {
     header: {
-      reservar: 'Book',
+      reservar: 'Book by phone',
     },
     hero: {
       badge: 'Castilian tavern in La Latina',
       titulo: 'Castilian cooking',
       tituloAcento: 'in the heart of La Latina',
       desc: 'Twelve years serving stews, roasts and torreznos just like home, in a tavern with real character in the heart of La Latina.',
-      ctaReservar: 'Book a table',
+      ctaReservar: 'Book by phone',
+      ctaWhatsapp: 'Message us on WhatsApp',
       ctaCarta: 'See the menu',
     },
     carta: {
@@ -383,7 +407,7 @@ export const textos: Record<Lang, Textos> = {
     },
     resenas: {
       titulo: 'What people say about us',
-      subtitulo: 'Real customer reviews on Google',
+      subtitulo: 'What our customers say',
       items: [
         {
           nombre: 'Marisa G.',
@@ -416,14 +440,11 @@ export const textos: Record<Lang, Textos> = {
       metroLabel: 'Getting here',
       metro: 'La Latina metro station (Line 5), 3 min walk',
       horarioLabel: 'Opening hours',
-      horario: [
-        'Tuesday to Sunday: 12:30pm - 4:30pm',
-        'Tuesday to Sunday: 8:00pm - 11:30pm',
-        'Closed on Mondays',
-      ],
+      horario: ['Tuesday to Sunday: 12:30pm–4:30pm & 8:00pm–11:30pm', 'Closed on Mondays'],
       terrazaLabel: 'Terrace',
       terraza:
         'We have a street terrace, perfect for lunch or dinner outdoors in season.',
+      abrirMapa: 'Open in Google Maps',
     },
     footer: {
       desc: 'Castilian tavern in La Latina, Madrid.',
@@ -431,12 +452,14 @@ export const textos: Record<Lang, Textos> = {
       email: 'hola@tabernaelfogon.es',
       instagram: '@tabernaelfogon',
       horarioTitulo: 'Opening hours',
-      horario: ['Tue-Sun 12:30pm-4:30pm & 8:00pm-11:30pm', 'Closed on Mondays'],
+      horario: ['Tuesday to Sunday: 12:30pm–4:30pm & 8:00pm–11:30pm', 'Closed on Mondays'],
       aviso:
         'Fictional portfolio site, fictional business for demonstration purposes only.',
+      ctaReservar: 'Book by phone',
+      ctaWhatsapp: 'WhatsApp',
     },
     sticky: {
-      reservar: 'Book a table',
+      reservar: 'Book by phone',
     },
   },
 }

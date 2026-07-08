@@ -1,9 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import { CalendarCheck, UtensilsCrossed } from 'lucide-react'
+import { Phone, MessageCircle, UtensilsCrossed } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
-import { RESERVA_URL } from '@/data/textos'
+import { NEGOCIO } from '@/data/textos'
 
 export default function Hero() {
   const { t } = useLanguage()
@@ -38,15 +38,22 @@ export default function Hero() {
           {t.hero.desc}
         </p>
 
-        <div className="mt-8 flex flex-col sm:flex-row gap-3">
+        <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3">
           <a
-            href={RESERVA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={NEGOCIO.telUrl}
             className="flex items-center justify-center gap-2 bg-acento-600 hover:bg-acento-700 transition-colors text-white font-semibold px-6 py-4 rounded-xl text-lg shadow-lg shadow-black/20"
           >
-            <CalendarCheck size={20} />
+            <Phone size={20} />
             {t.hero.ctaReservar}
+          </a>
+          <a
+            href={NEGOCIO.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 bg-crema/10 hover:bg-crema/20 transition-colors text-crema font-semibold px-6 py-4 rounded-xl text-lg border border-crema/40 backdrop-blur-sm"
+          >
+            <MessageCircle size={20} />
+            {t.hero.ctaWhatsapp}
           </a>
           <a
             href="#carta"

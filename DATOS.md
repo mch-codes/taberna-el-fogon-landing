@@ -26,8 +26,12 @@ real.
 - **Horario:** Martes a domingo de 12:30 a 16:30 y de 20:00 a 23:30.
   Lunes cerrado.
 - **Metro más cercano:** La Latina (Línea 5), a 3 min andando
-- **Link de reservas:** https://covermanager.com/placeholder (simula
-  integración con CoverManager)
+- **Reservas:** llamada telefónica al número de arriba (`tel:911223344`)
+  como CTA principal, con WhatsApp (`https://wa.me/34911223344`) como
+  vía secundaria. No hay integración real de reservas online — antes
+  apuntaba a un placeholder roto de CoverManager, ya retirado. Ambos
+  enlaces están centralizados en `NEGOCIO` (`src/data/textos.ts`), no se
+  hardcodean en los componentes.
 - **Idiomas:** la página es bilingüe ES/EN con un toggle en el header
   (estado en cliente vía `LanguageContext`, sin librerías de i18n ni
   rutas separadas). Español por defecto.
@@ -74,7 +78,8 @@ Descripciones completas (ES/EN) en `src/data/textos.ts`.
 
 ## CTAs
 
-- Botón principal: "Reservar mesa" / "Book a table" → link externo de
-  reservas (CoverManager placeholder)
+- Botón principal: "Reservar por teléfono" / "Book by phone" → `tel:911223344`
+- Botón secundario (hero y footer): "Escríbenos por WhatsApp" /
+  "Message us on WhatsApp" → `https://wa.me/34911223344`
 - Botón secundario del hero: "Ver la carta" / "See the menu" → ancla a
   `#carta`

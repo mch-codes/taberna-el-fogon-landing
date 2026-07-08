@@ -1,8 +1,8 @@
 'use client'
 
-import { Phone, Mail, AtSign, MapPin, CalendarCheck } from 'lucide-react'
+import { Phone, Mail, AtSign, MapPin, MessageCircle } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
-import { RESERVA_URL } from '@/data/textos'
+import { NEGOCIO } from '@/data/textos'
 
 export default function Footer() {
   const { t } = useLanguage()
@@ -18,10 +18,7 @@ export default function Footer() {
             <p className="mt-1 text-sm text-primary-300">{t.footer.desc}</p>
 
             <div className="mt-5 flex flex-col gap-2 text-sm">
-              <a
-                href={`tel:${t.footer.telefono.replace(/\s/g, '')}`}
-                className="flex items-center gap-2 hover:text-white"
-              >
+              <a href={NEGOCIO.telUrl} className="flex items-center gap-2 hover:text-white">
                 <Phone size={16} />
                 {t.footer.telefono}
               </a>
@@ -53,15 +50,22 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="sm:text-right">
+          <div className="sm:text-right flex flex-col sm:items-end gap-3">
             <a
-              href={RESERVA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={NEGOCIO.telUrl}
               className="inline-flex items-center gap-2 bg-acento-600 hover:bg-acento-700 transition-colors text-white font-semibold px-5 py-3 rounded-xl"
             >
-              <CalendarCheck size={18} />
-              {t.header.reservar}
+              <Phone size={18} />
+              {t.footer.ctaReservar}
+            </a>
+            <a
+              href={NEGOCIO.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 transition-colors text-white font-semibold px-5 py-3 rounded-xl"
+            >
+              <MessageCircle size={18} />
+              {t.footer.ctaWhatsapp}
             </a>
           </div>
         </div>

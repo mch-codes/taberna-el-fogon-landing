@@ -1,7 +1,9 @@
 'use client'
 
-import { MapPin, Clock, Train, Sun } from 'lucide-react'
+import Image from 'next/image'
+import { MapPin, Clock, Train, Sun, ExternalLink } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
+import { NEGOCIO } from '@/data/textos'
 
 export default function Ubicacion() {
   const { t } = useLanguage()
@@ -15,15 +17,24 @@ export default function Ubicacion() {
         <p className="mt-2 text-center text-gray-500">{t.ubicacion.subtitulo}</p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 items-start">
-          <div className="rounded-2xl overflow-hidden border border-primary-200 aspect-[4/3]">
-            <iframe
-              title="Ubicación de Taberna El Fogón en La Latina, Madrid"
-              src="https://maps.google.com/maps?q=Calle%20de%20la%20Cava%20Baja%2022%2C%2028005%20Madrid&output=embed"
-              className="w-full h-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+          <a
+            href={NEGOCIO.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative block rounded-2xl overflow-hidden border border-primary-200 aspect-[4/3]"
+          >
+            <Image
+              src="/images/mapa-taberna.svg"
+              alt="Mapa de la ubicación de Taberna El Fogón en La Latina, Madrid"
+              fill
+              unoptimized
+              className="object-cover"
             />
-          </div>
+            <span className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 bg-white/95 text-primary-900 text-xs font-semibold px-3 py-1.5 rounded-full shadow group-hover:bg-white">
+              <ExternalLink size={14} />
+              {t.ubicacion.abrirMapa}
+            </span>
+          </a>
 
           <div className="flex flex-col gap-5">
             <div className="flex items-start gap-3">
