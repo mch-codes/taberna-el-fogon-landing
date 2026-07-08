@@ -11,7 +11,7 @@ export default function Historia() {
       <div className="max-w-5xl mx-auto px-4 py-14 md:py-20 grid md:grid-cols-2 gap-10 items-center">
         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm order-2 md:order-1">
           <Image
-            src="/images/historia.svg"
+            src="/images/historia.jpg"
             alt="Rocío y Jaime, propietarios de Taberna El Fogón (imagen de muestra)"
             fill
             unoptimized

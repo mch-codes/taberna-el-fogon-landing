@@ -12,7 +12,7 @@ export default function Hero() {
     <section className="relative min-h-[85vh] md:min-h-[92vh] flex items-end md:items-center">
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-taberna.svg"
+          src="/images/hero-taberna.jpg"
           alt="Interior y platos de Taberna El Fogón en La Latina (imagen de muestra)"
           fill
           unoptimized
