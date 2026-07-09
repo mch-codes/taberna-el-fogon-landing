@@ -10,9 +10,12 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 bg-crema/95 backdrop-blur border-b border-primary-200/60">
       <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-        <span className="font-display text-xl md:text-2xl font-bold text-primary-900">
+        <a
+          href="#top"
+          className="font-display text-xl md:text-2xl font-bold text-primary-900"
+        >
           El Fogón
-        </span>
+        </a>
 
         <div className="flex items-center gap-3">
           <div className="flex items-center rounded-full border border-primary-300 p-0.5 text-sm font-semibold">

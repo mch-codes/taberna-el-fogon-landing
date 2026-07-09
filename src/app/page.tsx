@@ -11,7 +11,7 @@ import StickyReservaButton from '@/components/StickyReservaButton'
 export default function Home() {
   return (
     <LanguageProvider>
-      <div className="pb-16 md:pb-0">
+      <div id="top" className="pb-16 md:pb-0">
         <Header />
         <Hero />
         <Carta />
