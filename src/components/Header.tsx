@@ -1,54 +1,31 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { Phone } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 import { NEGOCIO } from '@/data/textos'
 
 export default function Header() {
   const { lang, setLang, t } = useLanguage()
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-300 ${
-        scrolled
-          ? 'bg-crema/95 backdrop-blur border-b border-primary-200/60'
-          : 'bg-transparent border-b border-transparent'
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-40 bg-primary-900/30 backdrop-blur-md border-b border-crema/10">
       <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
         <a
           href="#top"
-          className={`font-display text-xl md:text-2xl font-bold transition-colors duration-300 ${
-            scrolled ? 'text-primary-900' : 'text-crema'
-          }`}
+          className="font-display text-xl md:text-2xl font-bold text-crema"
         >
           El Fogón
         </a>
 
         <div className="flex items-center gap-3">
-          <div
-            className={`flex items-center rounded-full border p-0.5 text-sm font-semibold transition-colors duration-300 ${
-              scrolled ? 'border-primary-300' : 'border-crema/40'
-            }`}
-          >
+          <div className="flex items-center rounded-full border border-crema/40 p-0.5 text-sm font-semibold">
             <button
               type="button"
               onClick={() => setLang('es')}
               className={`px-2.5 py-1 rounded-full transition-colors ${
                 lang === 'es'
                   ? 'bg-primary-600 text-white'
-                  : scrolled
-                    ? 'text-primary-700 hover:bg-primary-100'
-                    : 'text-crema hover:bg-crema/20'
+                  : 'text-crema hover:bg-crema/20'
               }`}
               aria-pressed={lang === 'es'}
             >
@@ -60,9 +37,7 @@ export default function Header() {
               className={`px-2.5 py-1 rounded-full transition-colors ${
                 lang === 'en'
                   ? 'bg-primary-600 text-white'
-                  : scrolled
-                    ? 'text-primary-700 hover:bg-primary-100'
-                    : 'text-crema hover:bg-crema/20'
+                  : 'text-crema hover:bg-crema/20'
               }`}
               aria-pressed={lang === 'en'}
             >

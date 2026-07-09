@@ -9,7 +9,7 @@ export default function Hero() {
   const { t } = useLanguage()
 
   return (
-    <section className="relative min-h-[85vh] md:min-h-[92vh] flex items-end md:items-center">
+    <section className="relative min-h-screen flex items-end md:items-center">
       <div className="absolute inset-0">
         <Image
           src="/images/hero-taberna.jpg"
