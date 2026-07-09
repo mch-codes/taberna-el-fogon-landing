@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Phone, MessageCircle, UtensilsCrossed } from 'lucide-react'
+import { Phone, MessageCircle } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 import { NEGOCIO } from '@/data/textos'
 
@@ -23,11 +23,6 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-5xl mx-auto px-4 pb-14 pt-24 md:pb-24 w-full text-crema">
-        <span className="inline-flex items-center gap-1.5 bg-crema/15 border border-crema/30 text-sm font-semibold px-3 py-1 rounded-full mb-5 backdrop-blur-sm">
-          <UtensilsCrossed size={14} />
-          {t.hero.badge}
-        </span>
-
         <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-2xl">
           {t.hero.titulo}
           <br />
