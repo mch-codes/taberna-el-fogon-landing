@@ -95,19 +95,20 @@ export const NEGOCIO = {
   },
   mapsUrl:
     'https://www.google.com/maps/search/?api=1&query=Calle+de+la+Cava+Baja+22%2C+28005+Madrid',
+  bookingUrl: 'https://www.thefork.es/restaurante/el-gorrion-r863395#booking=',
 }
 
 export const textos: Record<Lang, Textos> = {
   es: {
     header: {
-      reservar: 'Reservar por teléfono',
+      reservar: 'Reservar mesa',
     },
     hero: {
       badge: 'Taberna castellana en La Latina',
       titulo: 'Cocina castellana',
       tituloAcento: 'en el corazón de La Latina',
       desc: 'Doce años sirviendo guisos, asados y torreznos como los de casa, en una taberna con solera en pleno barrio de La Latina.',
-      ctaReservar: 'Reservar por teléfono',
+      ctaReservar: 'Reservar mesa',
       ctaWhatsapp: 'Escríbenos por WhatsApp',
       ctaCarta: 'Ver la carta',
     },
@@ -273,23 +274,23 @@ export const textos: Record<Lang, Textos> = {
       horario: ['Martes a domingo: 12:30–16:30 y 20:00–23:30', 'Lunes cerrado'],
       aviso:
         'Sitio ficticio de portfolio, negocio ficticio con fines de demostración.',
-      ctaReservar: 'Reservar por teléfono',
+      ctaReservar: 'Reservar mesa',
       ctaWhatsapp: 'WhatsApp',
     },
     sticky: {
-      reservar: 'Reservar por teléfono',
+      reservar: 'Reservar mesa',
     },
   },
   en: {
     header: {
-      reservar: 'Book by phone',
+      reservar: 'Book a table',
     },
     hero: {
       badge: 'Castilian tavern in La Latina',
       titulo: 'Castilian cooking',
       tituloAcento: 'in the heart of La Latina',
       desc: 'Twelve years serving stews, roasts and torreznos just like home, in a tavern with real character in the heart of La Latina.',
-      ctaReservar: 'Book by phone',
+      ctaReservar: 'Book a table',
       ctaWhatsapp: 'Message us on WhatsApp',
       ctaCarta: 'See the menu',
     },
@@ -455,11 +456,11 @@ export const textos: Record<Lang, Textos> = {
       horario: ['Tuesday to Sunday: 12:30pm–4:30pm & 8:00pm–11:30pm', 'Closed on Mondays'],
       aviso:
         'Fictional portfolio site, fictional business for demonstration purposes only.',
-      ctaReservar: 'Book by phone',
+      ctaReservar: 'Book a table',
       ctaWhatsapp: 'WhatsApp',
     },
     sticky: {
-      reservar: 'Book by phone',
+      reservar: 'Book a table',
     },
   },
 }

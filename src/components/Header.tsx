@@ -1,6 +1,6 @@
 'use client'
 
-import { Phone } from 'lucide-react'
+import { CalendarCheck } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 import { NEGOCIO } from '@/data/textos'
 
@@ -46,10 +46,12 @@ export default function Header() {
           </div>
 
           <a
-            href={NEGOCIO.telUrl}
+            href={NEGOCIO.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:flex items-center gap-2 bg-acento-600 hover:bg-acento-700 transition-colors text-white font-semibold px-4 py-2 rounded-xl text-sm"
           >
-            <Phone size={16} />
+            <CalendarCheck size={16} />
             {t.header.reservar}
           </a>
         </div>

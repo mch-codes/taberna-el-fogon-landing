@@ -1,6 +1,6 @@
 'use client'
 
-import { Phone, Mail, AtSign, MapPin, MessageCircle } from 'lucide-react'
+import { Phone, Mail, AtSign, MapPin, MessageCircle, CalendarCheck } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 import { NEGOCIO } from '@/data/textos'
 
@@ -52,10 +52,12 @@ export default function Footer() {
 
           <div className="sm:text-right flex flex-col sm:items-end gap-3">
             <a
-              href={NEGOCIO.telUrl}
+              href={NEGOCIO.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-acento-600 hover:bg-acento-700 transition-colors text-white font-semibold px-5 py-3 rounded-xl"
             >
-              <Phone size={18} />
+              <CalendarCheck size={18} />
               {t.footer.ctaReservar}
             </a>
             <a

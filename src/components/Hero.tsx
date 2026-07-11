@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Phone, MessageCircle } from 'lucide-react'
+import { CalendarCheck, MessageCircle } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 import { NEGOCIO } from '@/data/textos'
 
@@ -35,10 +35,12 @@ export default function Hero() {
 
         <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3">
           <a
-            href={NEGOCIO.telUrl}
+            href={NEGOCIO.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-acento-600 hover:bg-acento-700 transition-colors text-white font-semibold px-6 py-4 rounded-xl text-lg shadow-lg shadow-black/20"
           >
-            <Phone size={20} />
+            <CalendarCheck size={20} />
             {t.hero.ctaReservar}
           </a>
           <a
