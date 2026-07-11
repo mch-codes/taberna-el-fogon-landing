@@ -95,7 +95,7 @@ export const NEGOCIO = {
   },
   mapsUrl:
     'https://www.google.com/maps/search/?api=1&query=Calle+de+la+Cava+Baja+22%2C+28005+Madrid',
-  bookingUrl: 'https://www.thefork.es/restaurante/el-gorrion-r863395#booking=',
+  bookingUrl: 'https://www.thefork.es/',
 }
 
 export const textos: Record<Lang, Textos> = {
