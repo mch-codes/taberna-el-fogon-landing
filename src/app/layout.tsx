@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter, Playfair_Display, IBM_Plex_Mono } from 'next/font/google'
 import JsonLd from '@/components/JsonLd'
 import './globals.css'
 
@@ -11,6 +11,12 @@ const inter = Inter({
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
+})
+
+const mono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-mono',
 })
 
 const title = 'Taberna El Fogón — Cocina castellana en La Latina, Madrid'
@@ -43,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="es" className={`${inter.variable} ${playfair.variable} ${mono.variable}`}>
       <body>
         <JsonLd />
         {children}

@@ -8,7 +8,10 @@ export default function Carta() {
 
   return (
     <section id="carta" className="max-w-5xl mx-auto px-4 py-14 md:py-20 scroll-mt-16">
-      <h2 className="font-display text-2xl md:text-4xl font-bold text-center text-primary-900">
+      <p className="font-mono uppercase tracking-[0.2em] text-xs text-acento-600 text-center">
+        {t.carta.eyebrow}
+      </p>
+      <h2 className="mt-2 font-display text-2xl md:text-4xl font-bold text-center text-primary-900">
         {t.carta.titulo}
       </h2>
       <p className="mt-2 text-center text-gray-500 max-w-xl mx-auto">

@@ -20,6 +20,9 @@ export default function Historia() {
         </div>
 
         <div className="order-1 md:order-2">
+          <p className="font-mono uppercase tracking-[0.2em] text-xs text-acento-600 mb-2">
+            {t.historia.eyebrow}
+          </p>
           <h2 className="font-display text-2xl md:text-4xl font-bold text-primary-900">
             {t.historia.titulo}
           </h2>

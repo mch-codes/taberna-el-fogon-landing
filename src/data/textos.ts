@@ -24,6 +24,7 @@ interface Textos {
     reservar: string
   }
   hero: {
+    eyebrow: string
     badge: string
     titulo: string
     tituloAcento: string
@@ -33,11 +34,13 @@ interface Textos {
     ctaCarta: string
   }
   carta: {
+    eyebrow: string
     titulo: string
     subtitulo: string
     categorias: CategoriaCarta[]
   }
   historia: {
+    eyebrow: string
     titulo: string
     parrafo: string
     pie: string
@@ -48,6 +51,7 @@ interface Textos {
     items: Resena[]
   }
   ubicacion: {
+    eyebrow: string
     titulo: string
     subtitulo: string
     direccionLabel: string
@@ -104,6 +108,7 @@ export const textos: Record<Lang, Textos> = {
       reservar: 'Reservar mesa',
     },
     hero: {
+      eyebrow: 'La Latina · Madrid · Desde 2014',
       badge: 'Taberna castellana en La Latina',
       titulo: 'Cocina castellana',
       tituloAcento: 'en el corazón de La Latina',
@@ -113,6 +118,7 @@ export const textos: Record<Lang, Textos> = {
       ctaCarta: 'Ver la carta',
     },
     carta: {
+      eyebrow: 'La carta',
       titulo: 'Nuestra carta',
       subtitulo:
         'Cocina de toda la vida, con producto de temporada y raciones para compartir.',
@@ -219,6 +225,7 @@ export const textos: Record<Lang, Textos> = {
       ],
     },
     historia: {
+      eyebrow: 'Doce años en el barrio',
       titulo: 'Nuestra historia',
       parrafo:
         'Rocío y Jaime abrieron El Fogón hace doce años con una idea sencilla: cocinar como se cocinaba en las casas de Castilla, sin atajos. Ella lleva la sala y conoce a la mitad del barrio por su nombre; él no ha salido de la cocina desde el primer día. Entre los dos han convertido recetas de sus abuelas en la carta que ves hoy, con algún toque propio que nunca dejan de pulir. Para ellos, una taberna castellana de verdad se reconoce por el guiso, no por la decoración.',
@@ -252,6 +259,7 @@ export const textos: Record<Lang, Textos> = {
       ],
     },
     ubicacion: {
+      eyebrow: 'Cómo llegar',
       titulo: 'Dónde estamos',
       subtitulo: 'En pleno La Latina, a un paso del metro y con terraza en la calle.',
       direccionLabel: 'Dirección',
@@ -286,6 +294,7 @@ export const textos: Record<Lang, Textos> = {
       reservar: 'Book a table',
     },
     hero: {
+      eyebrow: 'La Latina · Madrid · Since 2014',
       badge: 'Castilian tavern in La Latina',
       titulo: 'Castilian cooking',
       tituloAcento: 'in the heart of La Latina',
@@ -295,6 +304,7 @@ export const textos: Record<Lang, Textos> = {
       ctaCarta: 'See the menu',
     },
     carta: {
+      eyebrow: 'The menu',
       titulo: 'Our menu',
       subtitulo:
         'Traditional home cooking, with seasonal produce and dishes to share.',
@@ -401,6 +411,7 @@ export const textos: Record<Lang, Textos> = {
       ],
     },
     historia: {
+      eyebrow: 'Twelve years in the neighborhood',
       titulo: 'Our story',
       parrafo:
         "Rocío and Jaime opened El Fogón twelve years ago with a simple idea: cook the way it was cooked in Castilian homes, no shortcuts. She runs the dining room and knows half the neighborhood by name; he hasn't left the kitchen since day one. Together they've turned their grandmothers' recipes into the menu you see today, adding their own touches they never stop refining. For them, a real Castilian tavern is judged by its stew, not its decor.",
@@ -434,6 +445,7 @@ export const textos: Record<Lang, Textos> = {
       ],
     },
     ubicacion: {
+      eyebrow: 'How to find us',
       titulo: 'Find us',
       subtitulo: 'Right in La Latina, steps from the metro, with a street terrace.',
       direccionLabel: 'Address',

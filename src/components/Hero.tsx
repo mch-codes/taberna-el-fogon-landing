@@ -23,6 +23,9 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-5xl mx-auto px-4 pb-14 pt-24 md:pb-24 w-full text-crema">
+        <p className="font-mono uppercase tracking-[0.2em] text-xs md:text-sm text-crema/70 mb-4">
+          {t.hero.eyebrow}
+        </p>
         <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-2xl">
           {t.hero.titulo}
           <br />

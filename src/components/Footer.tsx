@@ -18,7 +18,7 @@ export default function Footer() {
             <p className="mt-1 text-sm text-primary-300">{t.footer.desc}</p>
 
             <div className="mt-5 flex flex-col gap-2 text-sm">
-              <a href={NEGOCIO.telUrl} className="flex items-center gap-2 hover:text-white">
+              <a href={NEGOCIO.telUrl} className="flex items-center gap-2 font-mono hover:text-white">
                 <Phone size={16} />
                 {t.footer.telefono}
               </a>
@@ -39,7 +39,7 @@ export default function Footer() {
               </span>
             </div>
 
-            <div className="mt-4 text-xs text-primary-400">
+            <div className="mt-4 font-mono text-xs text-primary-400">
               {t.footer.horarioTitulo}:{' '}
               {t.footer.horario.map((linea, i) => (
                 <span key={i}>

@@ -11,7 +11,10 @@ export default function Ubicacion() {
   return (
     <section className="bg-crema">
       <div className="max-w-5xl mx-auto px-4 py-14 md:py-20">
-        <h2 className="font-display text-2xl md:text-4xl font-bold text-center text-primary-900">
+        <p className="font-mono uppercase tracking-[0.2em] text-xs text-acento-600 text-center">
+          {t.ubicacion.eyebrow}
+        </p>
+        <h2 className="mt-2 font-display text-2xl md:text-4xl font-bold text-center text-primary-900">
           {t.ubicacion.titulo}
         </h2>
         <p className="mt-2 text-center text-gray-500">{t.ubicacion.subtitulo}</p>
@@ -69,7 +72,7 @@ export default function Ubicacion() {
                 <h3 className="font-semibold text-gray-900">
                   {t.ubicacion.horarioLabel}
                 </h3>
-                <p className="mt-1 text-sm text-gray-500">
+                <p className="mt-1 font-mono text-xs text-gray-500 leading-relaxed">
                   {t.ubicacion.horario.map((linea, i) => (
                     <span key={i}>
                       {linea}
