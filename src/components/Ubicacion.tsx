@@ -1,102 +1,73 @@
 'use client'
 
 import Image from 'next/image'
-import { MapPin, Clock, Train, Sun, ExternalLink } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 import { NEGOCIO } from '@/data/textos'
+
+const CERRADO = ['Cerrado', 'Closed']
 
 export default function Ubicacion() {
   const { t } = useLanguage()
 
   return (
-    <section className="bg-crema">
-      <div className="max-w-5xl mx-auto px-4 py-14 md:py-20">
-        <p className="font-mono uppercase tracking-[0.2em] text-xs text-acento-600 text-center">
-          {t.ubicacion.eyebrow}
-        </p>
-        <h2 className="mt-2 font-display text-2xl md:text-4xl font-bold text-center text-primary-900">
-          {t.ubicacion.titulo}
-        </h2>
-        <p className="mt-2 text-center text-gray-500">{t.ubicacion.subtitulo}</p>
+    <section id="ubicacion" className="max-w-3xl mx-auto px-4 py-14 md:py-20 scroll-mt-16">
+      <p className="font-mono uppercase tracking-[0.2em] text-xs text-acento-600">
+        {t.ubicacion.eyebrow}
+      </p>
+      <h2 className="mt-2 font-display text-3xl md:text-4xl font-bold text-primary-900">
+        {t.ubicacion.titulo}
+      </h2>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 items-start">
+      <div className="mt-8 grid gap-8 sm:grid-cols-2">
+        <div>
+          <p className="font-mono uppercase tracking-widest text-xs text-gray-400">
+            {t.ubicacion.direccionLabel}
+          </p>
+          <p className="mt-2 text-primary-900">{t.ubicacion.direccion}</p>
           <a
             href={NEGOCIO.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative block rounded-2xl overflow-hidden border border-primary-200 aspect-[4/3]"
+            className="mt-2 inline-flex items-center gap-1.5 text-acento-600 font-semibold text-sm hover:text-acento-700"
           >
-            <Image
-              src="/images/mapa-taberna.svg"
-              alt="Mapa de la ubicación de Taberna El Fogón en La Latina, Madrid"
-              fill
-              unoptimized
-              className="object-cover"
-            />
-            <span className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 bg-white/95 text-primary-900 text-xs font-semibold px-3 py-1.5 rounded-full shadow group-hover:bg-white">
-              <ExternalLink size={14} />
-              {t.ubicacion.abrirMapa}
-            </span>
+            {t.ubicacion.abrirMapa} <span aria-hidden>→</span>
           </a>
+        </div>
 
-          <div className="flex flex-col gap-5">
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white text-primary-700 flex items-center justify-center shrink-0">
-                <MapPin size={20} />
+        <div>
+          <p className="font-mono uppercase tracking-widest text-xs text-gray-400">
+            {t.ubicacion.horarioLabel}
+          </p>
+          <dl className="mt-2 font-mono text-sm">
+            {t.ubicacion.horario.map((row) => (
+              <div
+                key={row.dias}
+                className="flex justify-between gap-6 py-1.5 border-b border-primary-900/10"
+              >
+                <dt className="text-primary-900">{row.dias}</dt>
+                <dd className={CERRADO.includes(row.horas) ? 'text-gray-400' : 'text-primary-900'}>
+                  {row.horas}
+                </dd>
               </div>
-              <div>
-                <h3 className="font-semibold text-gray-900">
-                  {t.ubicacion.direccionLabel}
-                </h3>
-                <p className="mt-1 text-sm text-gray-500">{t.ubicacion.direccion}</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white text-primary-700 flex items-center justify-center shrink-0">
-                <Train size={20} />
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-900">
-                  {t.ubicacion.metroLabel}
-                </h3>
-                <p className="mt-1 text-sm text-gray-500">{t.ubicacion.metro}</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white text-primary-700 flex items-center justify-center shrink-0">
-                <Clock size={20} />
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-900">
-                  {t.ubicacion.horarioLabel}
-                </h3>
-                <p className="mt-1 font-mono text-xs text-gray-500 leading-relaxed">
-                  {t.ubicacion.horario.map((linea, i) => (
-                    <span key={i}>
-                      {linea}
-                      {i < t.ubicacion.horario.length - 1 && <br />}
-                    </span>
-                  ))}
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white text-primary-700 flex items-center justify-center shrink-0">
-                <Sun size={20} />
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-900">
-                  {t.ubicacion.terrazaLabel}
-                </h3>
-                <p className="mt-1 text-sm text-gray-500">{t.ubicacion.terraza}</p>
-              </div>
-            </div>
-          </div>
+            ))}
+          </dl>
         </div>
       </div>
+
+      <a
+        href={NEGOCIO.mapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative mt-10 block aspect-[16/7] rounded-3xl overflow-hidden border border-primary-200"
+      >
+        <Image
+          src="/images/mapa-taberna.svg"
+          alt="Mapa de la ubicación de Taberna El Fogón en La Latina, Madrid"
+          fill
+          unoptimized
+          className="object-cover"
+        />
+      </a>
     </section>
   )
 }
