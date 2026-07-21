@@ -54,7 +54,6 @@ export default function JsonLd() {
         hasMenuItem: categoria.platos.map((plato) => ({
           '@type': 'MenuItem',
           name: plato.nombre,
-          description: plato.desc,
           offers: {
             '@type': 'Offer',
             price: precioNumerico(plato.precio),

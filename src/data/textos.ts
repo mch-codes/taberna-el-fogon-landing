@@ -2,9 +2,7 @@ export type Lang = 'es' | 'en'
 
 export interface Plato {
   nombre: string
-  desc: string
   precio: string
-  imagen: string
 }
 
 export interface CategoriaCarta {
@@ -119,107 +117,47 @@ export const textos: Record<Lang, Textos> = {
     },
     carta: {
       eyebrow: 'La carta',
-      titulo: 'Nuestra carta',
-      subtitulo:
-        'Cocina de toda la vida, con producto de temporada y raciones para compartir.',
+      titulo: 'Qué comemos hoy',
+      subtitulo: 'Carta de temporada · precios en euros, IVA incluido',
       categorias: [
         {
-          nombre: 'Entrantes',
+          nombre: 'Para Picar',
           platos: [
-            {
-              nombre: 'Torreznos de Soria',
-              desc: 'Crujientes por fuera, tiernos por dentro; se sirven bien calientes con un chorrito de limón.',
-              precio: '9,50 €',
-              imagen: '/images/entrante1.jpg',
-            },
-            {
-              nombre: 'Croquetas de rabo de toro',
-              desc: 'Bechamel cremosa y carne de rabo de toro guisada ocho horas; el plato que nos hizo famosos en el barrio.',
-              precio: '10,50 €',
-              imagen: '/images/entrante2.jpg',
-            },
-            {
-              nombre: 'Pimientos de Padrón',
-              desc: 'Fritos en aceite de oliva virgen y espolvoreados con sal gorda; unos pican, otros no.',
-              precio: '7,00 €',
-              imagen: '/images/entrante3.jpg',
-            },
-            {
-              nombre: 'Morcilla de Burgos con piñones',
-              desc: 'A la plancha, jugosa por dentro, con un puñado de piñones tostados por encima.',
-              precio: '8,50 €',
-              imagen: '/images/entrante4.jpg',
-            },
-            {
-              nombre: 'Ensalada de perdiz escabechada',
-              desc: 'Perdiz de caza en escabeche casero sobre lecho de lechugas y cebolla morada.',
-              precio: '11,00 €',
-              imagen: '/images/entrante5.jpg',
-            },
+            { nombre: 'Croquetas de jamón ibérico', precio: '8,50€' },
+            { nombre: 'Pimientos de Padrón', precio: '6,00€' },
+            { nombre: 'Patatas bravas de la casa', precio: '5,50€' },
+            { nombre: 'Tabla de quesos y embutidos', precio: '14,00€' },
           ],
         },
         {
-          nombre: 'Principales',
+          nombre: 'De la Brasa',
           platos: [
-            {
-              nombre: 'Cochinillo asado (solo domingos)',
-              desc: 'Asado lento durante horas hasta que la piel queda crujiente y la carne se deshace sola.',
-              precio: '26,00 €',
-              imagen: '/images/principales1.jpg',
-            },
-            {
-              nombre: 'Rabo de toro estofado al vino tinto',
-              desc: 'Guiso de toda la vida, con una salsa que se rebaña hasta el último trozo de pan.',
-              precio: '19,50 €',
-              imagen: '/images/principales2.jpg',
-            },
-            {
-              nombre: 'Cordero lechal al horno de leña',
-              desc: 'Media ración o ración entera, con patatas panadera y su jugo.',
-              precio: '22,00 €',
-              imagen: '/images/principales3.jpg',
-            },
-            {
-              nombre: 'Bacalao confitado con migas',
-              desc: 'Lomo de bacalao a baja temperatura sobre migas crujientes de pan de pueblo.',
-              precio: '18,00 €',
-              imagen: '/images/principales4.jpg',
-            },
-            {
-              nombre: 'Solomillo de ternera a la parrilla',
-              desc: 'Con salsa de Cabrales y patatas asadas al romero.',
-              precio: '21,00 €',
-              imagen: '/images/principales5.jpg',
-            },
+            { nombre: 'Chuletillas de cordero', precio: '16,00€' },
+            { nombre: 'Secreto ibérico', precio: '15,00€' },
+            { nombre: 'Pulpo a la brasa', precio: '18,00€' },
+          ],
+        },
+        {
+          nombre: 'Raciones',
+          platos: [
+            { nombre: 'Tortilla de patatas', precio: '7,00€' },
+            { nombre: 'Rabo de toro estofado', precio: '15,50€' },
+            { nombre: 'Boquerones en vinagre', precio: '6,50€' },
           ],
         },
         {
           nombre: 'Postres',
           platos: [
-            {
-              nombre: 'Tarta de queso al horno',
-              desc: 'Cremosa por dentro, tostada por encima; receta propia de Jaime desde el primer día.',
-              precio: '6,50 €',
-              imagen: '/images/postre1.jpg',
-            },
-            {
-              nombre: 'Torrija caramelizada',
-              desc: 'Empapada en leche con canela y flambeada con azúcar justo antes de servir.',
-              precio: '6,00 €',
-              imagen: '/images/postre2.jpg',
-            },
-            {
-              nombre: 'Arroz con leche a la antigua',
-              desc: 'Cocido despacio, con su punto de canela en rama y piel de limón.',
-              precio: '5,50 €',
-              imagen: '/images/postre3.jpg',
-            },
-            {
-              nombre: 'Leche frita crujiente',
-              desc: 'Crujiente por fuera, cremosa por dentro; el postre de toda la vida de la casa.',
-              precio: '5,50 €',
-              imagen: '/images/postre4.jpg',
-            },
+            { nombre: 'Torrija caramelizada', precio: '5,00€' },
+            { nombre: 'Tarta de queso', precio: '5,50€' },
+          ],
+        },
+        {
+          nombre: 'Para Beber',
+          platos: [
+            { nombre: 'Vino de la casa (copa)', precio: '3,50€' },
+            { nombre: 'Vermut de grifo', precio: '3,00€' },
+            { nombre: 'Cerveza artesana', precio: '3,50€' },
           ],
         },
       ],
@@ -305,107 +243,47 @@ export const textos: Record<Lang, Textos> = {
     },
     carta: {
       eyebrow: 'The menu',
-      titulo: 'Our menu',
-      subtitulo:
-        'Traditional home cooking, with seasonal produce and dishes to share.',
+      titulo: 'What we’re serving today',
+      subtitulo: 'Seasonal menu · prices in euros, VAT included',
       categorias: [
         {
-          nombre: 'Starters',
+          nombre: 'To Share',
           platos: [
-            {
-              nombre: 'Torreznos de Soria',
-              desc: 'Crispy Castilian-style pork belly, served piping hot with a squeeze of lemon.',
-              precio: '€9.50',
-              imagen: '/images/entrante1.jpg',
-            },
-            {
-              nombre: 'Oxtail croquettes',
-              desc: 'Creamy béchamel with oxtail braised for eight hours; the dish that made us famous in the neighborhood.',
-              precio: '€10.50',
-              imagen: '/images/entrante2.jpg',
-            },
-            {
-              nombre: 'Padrón peppers',
-              desc: 'Fried in virgin olive oil and sprinkled with coarse salt; some are mild, some are not.',
-              precio: '€7.00',
-              imagen: '/images/entrante3.jpg',
-            },
-            {
-              nombre: 'Burgos blood sausage with pine nuts',
-              desc: 'Pan-seared, juicy inside, topped with a handful of toasted pine nuts.',
-              precio: '€8.50',
-              imagen: '/images/entrante4.jpg',
-            },
-            {
-              nombre: 'Cured partridge salad',
-              desc: 'Game partridge in homemade marinade over lettuce and red onion.',
-              precio: '€11.00',
-              imagen: '/images/entrante5.jpg',
-            },
+            { nombre: 'Iberian ham croquettes', precio: '€8.50' },
+            { nombre: 'Padrón peppers', precio: '€6.00' },
+            { nombre: 'House patatas bravas', precio: '€5.50' },
+            { nombre: 'Cheese & charcuterie board', precio: '€14.00' },
           ],
         },
         {
-          nombre: 'Main courses',
+          nombre: 'From the Grill',
           platos: [
-            {
-              nombre: 'Roast suckling pig (Sundays only)',
-              desc: 'Slow-roasted for hours until the skin turns crackling and the meat falls apart on its own.',
-              precio: '€26.00',
-              imagen: '/images/principales1.jpg',
-            },
-            {
-              nombre: 'Oxtail stew in red wine',
-              desc: 'A traditional slow stew, with a sauce worth mopping up to the last piece of bread.',
-              precio: '€19.50',
-              imagen: '/images/principales2.jpg',
-            },
-            {
-              nombre: 'Wood-oven roast lamb',
-              desc: 'Half or full portion, served with pan-roasted potatoes and its own juices.',
-              precio: '€22.00',
-              imagen: '/images/principales3.jpg',
-            },
-            {
-              nombre: 'Confit cod with migas',
-              desc: 'Cod loin cooked at low temperature over crispy country bread migas.',
-              precio: '€18.00',
-              imagen: '/images/principales4.jpg',
-            },
-            {
-              nombre: 'Grilled beef sirloin',
-              desc: 'With Cabrales blue cheese sauce and rosemary roast potatoes.',
-              precio: '€21.00',
-              imagen: '/images/principales5.jpg',
-            },
+            { nombre: 'Lamb chops', precio: '€16.00' },
+            { nombre: 'Iberian secreto pork', precio: '€15.00' },
+            { nombre: 'Grilled octopus', precio: '€18.00' },
+          ],
+        },
+        {
+          nombre: 'Portions',
+          platos: [
+            { nombre: 'Spanish potato omelette', precio: '€7.00' },
+            { nombre: 'Braised oxtail', precio: '€15.50' },
+            { nombre: 'Anchovies in vinegar', precio: '€6.50' },
           ],
         },
         {
           nombre: 'Desserts',
           platos: [
-            {
-              nombre: 'Baked cheesecake',
-              desc: "Creamy inside, toasted on top; Jaime's own recipe since day one.",
-              precio: '€6.50',
-              imagen: '/images/postre1.jpg',
-            },
-            {
-              nombre: 'Caramelized torrija',
-              desc: 'Soaked in cinnamon milk and flambéed with sugar right before serving.',
-              precio: '€6.00',
-              imagen: '/images/postre2.jpg',
-            },
-            {
-              nombre: 'Old-style rice pudding',
-              desc: 'Slow-cooked with a touch of cinnamon stick and lemon peel.',
-              precio: '€5.50',
-              imagen: '/images/postre3.jpg',
-            },
-            {
-              nombre: 'Crispy fried milk custard',
-              desc: "Crunchy outside, creamy inside; the house's classic dessert.",
-              precio: '€5.50',
-              imagen: '/images/postre4.jpg',
-            },
+            { nombre: 'Caramelized torrija', precio: '€5.00' },
+            { nombre: 'Cheesecake', precio: '€5.50' },
+          ],
+        },
+        {
+          nombre: 'To Drink',
+          platos: [
+            { nombre: 'House wine (glass)', precio: '€3.50' },
+            { nombre: 'Vermouth on tap', precio: '€3.00' },
+            { nombre: 'Craft beer', precio: '€3.50' },
           ],
         },
       ],
