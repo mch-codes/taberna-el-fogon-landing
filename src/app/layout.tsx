@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display, IBM_Plex_Mono } from 'next/font/google'
+import { Inter, Archivo_Black, Kalam, Space_Mono } from 'next/font/google'
 import JsonLd from '@/components/JsonLd'
 import './globals.css'
 
@@ -8,14 +8,22 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const playfair = Playfair_Display({
+// ponytail: Archivo Black ships one weight only — never pair it with font-bold (faux bolding)
+const archivo = Archivo_Black({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  weight: '400',
+  variable: '--font-display',
 })
 
-const mono = IBM_Plex_Mono({
+const kalam = Kalam({
   subsets: ['latin'],
-  weight: ['400', '500'],
+  weight: ['300', '400', '700'],
+  variable: '--font-hand',
+})
+
+const mono = Space_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
   variable: '--font-mono',
 })
 
@@ -49,7 +57,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${playfair.variable} ${mono.variable}`}>
+    <html
+      lang="es"
+      className={`${inter.variable} ${archivo.variable} ${kalam.variable} ${mono.variable}`}
+    >
       <body>
         <JsonLd />
         {children}

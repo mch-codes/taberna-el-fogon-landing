@@ -4,6 +4,22 @@
 
 @layer base {
   body {
-    @apply font-sans text-gray-800 bg-crema antialiased;
+    @apply font-sans text-pizarra bg-papel antialiased;
+  }
+}
+
+@layer components {
+  /* Chalk: cool off-white (real chalk is never pure white) plus a soft dust
+     bloom around the strokes. ponytail: two text-shadows, no SVG filters. */
+  .chalk {
+    color: #f2f1ea;
+    text-shadow:
+      0 0 1px rgba(242, 241, 234, 0.5),
+      0 0 7px rgba(242, 241, 234, 0.22);
+  }
+
+  .chalk-dim {
+    color: rgba(242, 241, 234, 0.62);
+    text-shadow: 0 0 6px rgba(242, 241, 234, 0.15);
   }
 }

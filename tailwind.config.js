@@ -6,41 +6,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // ponytail: flat named palette, no 50–900 scales — six colors is the whole system
       colors: {
-        primary: {
-          DEFAULT: '#a8532a',
-          50: '#fdf5ef',
-          100: '#faeadd',
-          200: '#f3d0b3',
-          300: '#e9ae7e',
-          400: '#dd8a52',
-          500: '#c96b34',
-          600: '#a8532a',
-          700: '#854225',
-          800: '#6c3620',
-          900: '#1a1512', // ponytail: darkest step = near-black for dark sections/headings (PDF), not brown
+        pizarra: '#262321', // chalkboard: dark sections, headings, body text
+        verde: {
+          DEFAULT: '#3F5C4E', // persiana verde: buttons, dominant accent
+          700: '#334B40', // hover only
         },
-        acento: {
-          DEFAULT: '#e0562a',
-          50: '#fdf3ee',
-          100: '#fbe4d8',
-          200: '#f6c4ab',
-          300: '#ef9e77',
-          400: '#e87548',
-          500: '#f26a3a',
-          600: '#e0562a',
-          700: '#bd4420',
-          800: '#98371b',
-          900: '#7c2f19',
-        },
-        crema: {
-          DEFAULT: '#faf1de',
-          100: '#f2e2bf',
-        },
+        papel: '#EDE6D6', // page background
+        oro: '#C9A227', // prices, small highlights — dark backgrounds only (1.9:1 on papel)
+        almagre: '#A13D2B', // eyebrow labels, small accents
+        barra: '#9AA39C', // borders, dividers, secondary text
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-playfair)', 'Georgia', 'serif'],
+        display: ['var(--font-display)', 'Impact', 'sans-serif'],
+        hand: ['var(--font-hand)', 'Comic Sans MS', 'cursive'],
         mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
       },
       borderRadius: {

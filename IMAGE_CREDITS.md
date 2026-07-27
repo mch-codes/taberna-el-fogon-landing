@@ -25,6 +25,11 @@ standalone asset.
 | postre4.jpg | Chinese New Year 2010 - Fried Milk dessert | Edsel L | CC BY-SA 2.0 | flickr.com/photos/27119975@N00/4396083543 |
 | hero-taberna.jpg | Calle Navas | Daquella manera | CC BY 2.0 | flickr.com/photos/62518311@N00/517108989 |
 | historia.jpg | Madison & Rayne: Josh Jones and Melanie Mityas, Owners | kurmanstaff | CC BY 2.0 | flickr.com/photos/62558987@N07/13275316983 |
+| pizarra.jpg | Empty blackboard, background photo | — (rawpixel) | CC0 1.0 | rawpixel.com/image/6043267 |
+
+`pizarra.jpg` is the chalkboard texture behind the carta section — cropped from
+the original to the bare slate (frame, chalk tray and wall removed). CC0, so no
+attribution is legally required; listed here for provenance.
 
 If this project ever represents a real, operating restaurant, replace all of
 these with real photos of the actual venue, dishes, and owners.

@@ -7,13 +7,13 @@ export default function Historia() {
 
   return (
     <section className="max-w-3xl mx-auto px-4 py-14 md:py-20">
-      <p className="font-mono uppercase tracking-[0.2em] text-xs text-acento-600">
+      <p className="font-mono uppercase tracking-[0.2em] text-xs text-almagre">
         {t.historia.eyebrow}
       </p>
-      <h2 className="mt-2 font-display text-3xl md:text-4xl font-bold text-primary-900 max-w-xl">
+      <h2 className="mt-2 font-display text-3xl md:text-4xl text-pizarra max-w-xl">
         {t.historia.titulo}
       </h2>
-      <p className="mt-6 text-gray-600 text-base md:text-lg leading-relaxed">
+      <p className="mt-6 text-pizarra/70 text-base md:text-lg leading-relaxed">
         {t.historia.parrafo}
       </p>
     </section>

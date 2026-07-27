@@ -13,7 +13,7 @@ export default function StickyReservaButton() {
         href={NEGOCIO.bookingUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center gap-2 w-full bg-acento-600 py-4 text-white font-semibold text-base"
+        className="flex items-center justify-center gap-2 w-full bg-verde py-4 text-white font-semibold text-base"
       >
         <CalendarCheck size={20} />
         {t.sticky.reservar}

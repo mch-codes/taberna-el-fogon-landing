@@ -8,10 +8,10 @@ export const dynamic = 'force-static'
 const NOMBRE = 'Taberna El Fogón'
 const TAGLINE = 'Cocina castellana en La Latina, Madrid'
 
-async function loadPlayfairFont() {
+async function loadDisplayFont() {
   const css = await (
     await fetch(
-      `https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&text=${encodeURIComponent(
+      `https://fonts.googleapis.com/css2?family=Archivo+Black:wght@400&text=${encodeURIComponent(
         NOMBRE + TAGLINE
       )}`
     )
@@ -19,7 +19,7 @@ async function loadPlayfairFont() {
 
   const fontUrl = css.match(/src: url\(([^)]+)\) format\('(opentype|truetype)'\)/)?.[1]
   if (!fontUrl) {
-    throw new Error('No se pudo resolver la URL de la fuente Playfair Display')
+    throw new Error('No se pudo resolver la URL de la fuente Archivo Black')
   }
 
   const fontRes = await fetch(fontUrl)
@@ -27,7 +27,7 @@ async function loadPlayfairFont() {
 }
 
 export default async function Image() {
-  const playfair = await loadPlayfairFont()
+  const displayFont = await loadDisplayFont()
 
   return new ImageResponse(
     (
@@ -39,16 +39,16 @@ export default async function Image() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#faf1de',
+          backgroundColor: '#EDE6D6',
         }}
       >
         <div
           style={{
             display: 'flex',
-            fontFamily: 'Playfair Display',
-            fontWeight: 700,
+            fontFamily: 'Archivo Black',
+            fontWeight: 400,
             fontSize: 104,
-            color: '#592d1c',
+            color: '#262321',
             textAlign: 'center',
           }}
         >
@@ -58,10 +58,10 @@ export default async function Image() {
           style={{
             display: 'flex',
             marginTop: 28,
-            fontFamily: 'Playfair Display',
-            fontWeight: 700,
+            fontFamily: 'Archivo Black',
+            fontWeight: 400,
             fontSize: 36,
-            color: '#82232c',
+            color: '#A13D2B',
             textAlign: 'center',
           }}
         >
@@ -73,7 +73,7 @@ export default async function Image() {
             marginTop: 48,
             width: 140,
             height: 5,
-            backgroundColor: '#a8532a',
+            backgroundColor: '#C9A227',
           }}
         />
       </div>
@@ -82,9 +82,9 @@ export default async function Image() {
       ...size,
       fonts: [
         {
-          name: 'Playfair Display',
-          data: playfair,
-          weight: 700,
+          name: 'Archivo Black',
+          data: displayFont,
+          weight: 400,
           style: 'normal',
         },
       ],

@@ -14,27 +14,27 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-40 bg-crema/90 backdrop-blur-md border-b border-primary-900/10">
+    <header className="sticky top-0 z-40 bg-papel/90 backdrop-blur-md border-b border-pizarra/10">
       <div className="w-full px-4 md:px-8 h-16 flex items-center justify-between gap-4">
         <a href="#top" className="flex items-center gap-2.5 shrink-0">
-          <span className="w-9 h-9 rounded-full border border-primary-900/40 flex items-center justify-center font-display text-sm text-primary-900">
+          <span className="w-9 h-9 rounded-full border border-pizarra/40 flex items-center justify-center font-display text-sm text-pizarra">
             EF
           </span>
-          <span className="font-display text-lg md:text-xl font-bold text-primary-900 leading-none">
+          <span className="font-display text-lg md:text-xl text-pizarra leading-none">
             Taberna El Fogón
           </span>
         </a>
 
-        <nav className="hidden md:flex flex-1 items-center justify-evenly text-sm text-primary-900">
+        <nav className="hidden md:flex flex-1 items-center justify-evenly text-sm text-pizarra">
           {nav.map((item) => (
-            <a key={item.href} href={item.href} className="hover:text-acento-600 transition-colors">
+            <a key={item.href} href={item.href} className="hover:text-almagre transition-colors">
               {item.label}
             </a>
           ))}
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="flex items-center rounded-full border border-primary-900/20 p-0.5 text-sm font-semibold">
+          <div className="flex items-center rounded-full border border-pizarra/20 p-0.5 text-sm font-semibold">
             {(['es', 'en'] as const).map((l) => (
               <button
                 key={l}
@@ -42,8 +42,8 @@ export default function Header() {
                 onClick={() => setLang(l)}
                 className={`px-2.5 py-1 rounded-full transition-colors ${
                   lang === l
-                    ? 'bg-acento-600 text-white'
-                    : 'text-primary-900 hover:bg-primary-900/10'
+                    ? 'bg-verde text-white'
+                    : 'text-pizarra hover:bg-pizarra/10'
                 }`}
                 aria-pressed={lang === l}
               >
@@ -56,7 +56,7 @@ export default function Header() {
             href={NEGOCIO.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1.5 bg-acento-600 hover:bg-acento-700 transition-colors text-white font-semibold px-4 py-2 rounded-xl text-sm"
+            className="hidden sm:inline-flex items-center gap-1.5 bg-verde hover:bg-verde-700 transition-colors text-white font-semibold px-4 py-2 rounded-xl text-sm"
           >
             WhatsApp <span aria-hidden>→</span>
           </a>
