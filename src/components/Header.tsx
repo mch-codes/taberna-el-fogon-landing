@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 bg-crema/90 backdrop-blur-md border-b border-primary-900/10">
-      <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      <div className="w-full px-4 md:px-8 h-16 flex items-center justify-between gap-4">
         <a href="#top" className="flex items-center gap-2.5 shrink-0">
           <span className="w-9 h-9 rounded-full border border-primary-900/40 flex items-center justify-center font-display text-sm text-primary-900">
             EF
@@ -25,7 +25,7 @@ export default function Header() {
           </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-7 text-sm text-primary-900">
+        <nav className="hidden md:flex flex-1 items-center justify-evenly text-sm text-primary-900">
           {nav.map((item) => (
             <a key={item.href} href={item.href} className="hover:text-acento-600 transition-colors">
               {item.label}

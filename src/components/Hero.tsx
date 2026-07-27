@@ -8,9 +8,9 @@ export default function Hero() {
   const { t } = useLanguage()
 
   return (
-    <section className="px-4 pt-6 md:pt-8">
-      <div className="max-w-5xl mx-auto">
-        <div className="relative overflow-hidden rounded-3xl bg-primary-900 min-h-[600px] md:min-h-[700px] flex items-end">
+    <section>
+      <div className="w-full">
+        <div className="relative overflow-hidden bg-primary-900 min-h-[600px] md:min-h-[700px] flex items-end">
           <Image
             src="/images/hero-taberna.jpg"
             alt="Interior de Taberna El Fogón: mesas de madera y jamones colgando (imagen de muestra)"
@@ -21,7 +21,7 @@ export default function Hero() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary-900 via-primary-900/60 to-primary-900/20" />
 
-          <div className="relative w-full max-w-2xl p-6 md:p-12 lg:p-16 text-crema">
+          <div className="relative w-full max-w-2xl p-6 md:p-12 lg:px-20 lg:py-16 text-crema">
             <p className="font-mono uppercase tracking-[0.2em] text-xs md:text-sm text-crema/70 mb-5">
               {t.hero.eyebrow}
             </p>
@@ -49,16 +49,6 @@ export default function Hero() {
               </a>
             </div>
           </div>
-        </div>
-
-        <div className="relative mt-5 aspect-[16/7] rounded-3xl overflow-hidden">
-          <Image
-            src="/images/principales3.jpg"
-            alt="Chuletillas y carne a la brasa de leña (imagen de muestra)"
-            fill
-            unoptimized
-            className="object-cover"
-          />
         </div>
       </div>
     </section>
