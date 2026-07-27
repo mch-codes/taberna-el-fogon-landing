@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-pizarra text-barra">
-      <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
+      <div className="w-full px-4 md:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
         <span>
           Taberna El Fogón · {calle} · {ciudad}
         </span>

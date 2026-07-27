@@ -34,6 +34,9 @@ interface Textos {
     subtitulo: string
     categorias: CategoriaCarta[]
   }
+  galeria: {
+    platos: string[]
+  }
   historia: {
     eyebrow: string
     titulo: string
@@ -152,6 +155,15 @@ export const textos: Record<Lang, Textos> = {
         },
       ],
     },
+    galeria: {
+      platos: [
+        'Chuletillas de cordero',
+        'Croquetas de jamón ibérico',
+        'Pimientos de Padrón',
+        'Rabo de toro estofado',
+        'Torrija caramelizada',
+      ],
+    },
     historia: {
       eyebrow: 'Doce años en el barrio',
       titulo: 'Nuestra historia',
@@ -250,6 +262,15 @@ export const textos: Record<Lang, Textos> = {
             { nombre: 'Craft beer', precio: '€3.50' },
           ],
         },
+      ],
+    },
+    galeria: {
+      platos: [
+        'Lamb chops',
+        'Ibérico ham croquettes',
+        'Padrón peppers',
+        'Braised oxtail',
+        'Caramelised torrija',
       ],
     },
     historia: {

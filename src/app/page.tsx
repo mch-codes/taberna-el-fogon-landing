@@ -2,7 +2,6 @@ import { LanguageProvider } from '@/context/LanguageContext'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Historia from '@/components/Historia'
-import Galeria from '@/components/Galeria'
 import Carta from '@/components/Carta'
 import Ubicacion from '@/components/Ubicacion'
 import Reservas from '@/components/Reservas'
@@ -16,7 +15,6 @@ export default function Home() {
         <Header />
         <Hero />
         <Historia />
-        <Galeria />
         <Carta />
         <Ubicacion />
         <Reservas />

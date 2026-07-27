@@ -7,8 +7,8 @@ export default function Reservas() {
   const { t } = useLanguage()
 
   return (
-    <section id="reservas" className="px-4 pb-14 md:pb-20 scroll-mt-16">
-      <div className="max-w-5xl mx-auto rounded-3xl bg-pizarra text-papel px-6 py-14 md:py-20 text-center">
+    <section id="reservas" className="scroll-mt-16">
+      <div className="w-full bg-pizarra text-papel px-6 py-14 md:py-20 text-center">
         <p className="font-mono uppercase tracking-[0.2em] text-xs text-papel/60">
           {t.reservas.eyebrow}
         </p>
