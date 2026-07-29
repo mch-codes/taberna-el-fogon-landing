@@ -34,8 +34,10 @@ interface Textos {
     subtitulo: string
     categorias: CategoriaCarta[]
   }
-  galeria: {
-    platos: string[]
+  destacados: {
+    eyebrow: string
+    titulo: string
+    items: { titulo: string; texto: string }[]
   }
   historia: {
     eyebrow: string
@@ -51,6 +53,7 @@ interface Textos {
     horarioLabel: string
     horario: { dias: string; horas: string }[]
     abrirMapa: string
+    contactoLabel: string
   }
   reservas: {
     eyebrow: string
@@ -155,13 +158,25 @@ export const textos: Record<Lang, Textos> = {
         },
       ],
     },
-    galeria: {
-      platos: [
-        'Chuletillas de cordero',
-        'Croquetas de jamón ibérico',
-        'Pimientos de Padrón',
-        'Rabo de toro estofado',
-        'Torrija caramelizada',
+    destacados: {
+      eyebrow: 'De la casa',
+      titulo: 'Lo que no te puedes perder',
+      items: [
+        {
+          titulo: 'Rabo de toro estofado',
+          texto:
+            'Cuatro horas a fuego lento, la receta de la abuela de Jaime. Se acaba casi todos los días.',
+        },
+        {
+          titulo: 'Chuletillas de cordero',
+          texto:
+            'Cordero lechal de Segovia, a la brasa y con sal gorda. Nada más.',
+        },
+        {
+          titulo: 'Torrija caramelizada',
+          texto:
+            'De masa madre, empapada en leche con canela y quemada al momento. Todo el año, no solo en Semana Santa.',
+        },
       ],
     },
     historia: {
@@ -182,6 +197,7 @@ export const textos: Record<Lang, Textos> = {
         { dias: 'Lunes', horas: 'Cerrado' },
       ],
       abrirMapa: 'Abrir en Google Maps',
+      contactoLabel: 'Contacto',
     },
     reservas: {
       eyebrow: 'Reservas',
@@ -264,13 +280,25 @@ export const textos: Record<Lang, Textos> = {
         },
       ],
     },
-    galeria: {
-      platos: [
-        'Lamb chops',
-        'Ibérico ham croquettes',
-        'Padrón peppers',
-        'Braised oxtail',
-        'Caramelised torrija',
+    destacados: {
+      eyebrow: 'From the house',
+      titulo: "What you shouldn't miss",
+      items: [
+        {
+          titulo: 'Braised oxtail',
+          texto:
+            "Four hours on a low flame, from Jaime's grandmother. We run out most days.",
+        },
+        {
+          titulo: 'Lamb chops',
+          texto:
+            'Milk-fed lamb from Segovia, straight off the grill with coarse salt. Nothing else.',
+        },
+        {
+          titulo: 'Caramelised torrija',
+          texto:
+            'Sourdough soaked in cinnamon milk and torched to order. All year round, not just at Easter.',
+        },
       ],
     },
     historia: {
@@ -291,6 +319,7 @@ export const textos: Record<Lang, Textos> = {
         { dias: 'Monday', horas: 'Closed' },
       ],
       abrirMapa: 'Open in Google Maps',
+      contactoLabel: 'Contact',
     },
     reservas: {
       eyebrow: 'Reservations',
