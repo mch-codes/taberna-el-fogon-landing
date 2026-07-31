@@ -6,16 +6,16 @@ export default function Carta() {
   const { t } = useLanguage()
 
   return (
-    <section id="carta" className="px-4 py-14 md:py-20 scroll-mt-16">
+    <section id="carta" className="px-4 md:px-8 py-14 md:py-20 scroll-mt-16">
       <div
-        className="max-w-4xl mx-auto rounded-3xl bg-pizarra bg-cover bg-center text-papel px-6 md:px-10 py-12 md:py-14"
+        className="max-w-5xl mx-auto rounded-3xl bg-pizarra bg-cover bg-center text-papel px-6 md:px-10 py-12 md:py-14"
         // ponytail: overlay keeps the effective bg at ~pizarra, so oro prices stay at 6.5:1
         style={{
           backgroundImage:
             'linear-gradient(rgba(38,35,33,0.72), rgba(38,35,33,0.72)), url(/images/pizarra.jpg)',
         }}
       >
-      <p className="font-mono uppercase tracking-[0.2em] text-xs text-oro">
+      <p className="uppercase tracking-[0.2em] text-xs text-oro">
         {t.carta.eyebrow}
       </p>
       <h2 className="chalk mt-2 font-display text-3xl md:text-4xl">
@@ -37,7 +37,7 @@ export default function Carta() {
                 <li key={plato.nombre} className="flex items-end gap-2">
                   <span className="chalk font-hand text-lg">{plato.nombre}</span>
                   <span className="flex-1 border-b border-dotted border-barra/40 mb-1.5" />
-                  <span className="font-mono text-sm text-oro tabular-nums mb-1.5">
+                  <span className="text-sm text-oro tabular-nums mb-1.5">
                     {plato.precio}
                   </span>
                 </li>

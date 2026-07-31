@@ -22,11 +22,12 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-pizarra via-pizarra/60 to-pizarra/20" />
 
           <div className="relative w-full max-w-2xl p-6 md:p-12 lg:px-20 lg:py-16 text-papel">
-            <p className="font-mono uppercase tracking-[0.2em] text-xs md:text-sm text-papel/70 mb-5">
+            <p className="uppercase tracking-[0.2em] text-xs md:text-sm text-papel/70 mb-5">
               {t.hero.eyebrow}
             </p>
-            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.95]">
-              Taberna El Fogón
+            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.95] tracking-[-0.02em]">
+              {t.hero.titulo}
+              <span className="block text-papel/80">{t.hero.tituloAcento}</span>
             </h1>
             <p className="mt-5 text-papel/90 text-base md:text-lg max-w-lg">
               {t.hero.desc}

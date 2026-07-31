@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Archivo_Black, Kalam, Space_Mono } from 'next/font/google'
+import { Inter, Archivo_Black, Kalam } from 'next/font/google'
 import JsonLd from '@/components/JsonLd'
 import './globals.css'
 
@@ -19,12 +19,6 @@ const kalam = Kalam({
   subsets: ['latin'],
   weight: ['300', '400', '700'],
   variable: '--font-hand',
-})
-
-const mono = Space_Mono({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-mono',
 })
 
 const title = 'Taberna El Fogón — Cocina castellana en La Latina, Madrid'
@@ -59,7 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${archivo.variable} ${kalam.variable} ${mono.variable}`}
+      className={`${inter.variable} ${archivo.variable} ${kalam.variable}`}
     >
       <body>
         <JsonLd />

@@ -9,7 +9,7 @@ export default function Reservas() {
   return (
     <section id="reservas" className="scroll-mt-16">
       <div className="w-full bg-pizarra text-papel px-6 py-14 md:py-20 text-center">
-        <p className="font-mono uppercase tracking-[0.2em] text-xs text-papel/60">
+        <p className="uppercase tracking-[0.2em] text-xs text-papel/60">
           {t.reservas.eyebrow}
         </p>
         <h2 className="mt-3 font-display text-3xl md:text-4xl">
@@ -36,7 +36,7 @@ export default function Reservas() {
           </a>
         </div>
 
-        <p className="mt-8 font-mono text-sm text-papel/60">Tel. {NEGOCIO.telefonoDisplay}</p>
+        <p className="mt-8 text-sm tabular-nums text-papel/60">Tel. {NEGOCIO.telefonoDisplay}</p>
       </div>
     </section>
   )

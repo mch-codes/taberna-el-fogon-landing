@@ -10,7 +10,7 @@ export default function StickyReservaButton() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden shadow-[0_-2px_10px_rgba(0,0,0,0.15)]">
       <a
-        href={NEGOCIO.bookingUrl}
+        href={NEGOCIO.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center gap-2 w-full bg-verde py-4 text-white font-semibold text-base"

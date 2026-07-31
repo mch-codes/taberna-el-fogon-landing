@@ -40,9 +40,10 @@ export default function Header() {
                 key={l}
                 type="button"
                 onClick={() => setLang(l)}
-                className={`px-2.5 py-1 rounded-full transition-colors ${
+                // ponytail: verde is the CTA color — the toggle must not borrow it
+                className={`px-3 py-2 rounded-full transition-colors ${
                   lang === l
-                    ? 'bg-verde text-white'
+                    ? 'bg-pizarra text-papel'
                     : 'text-pizarra hover:bg-pizarra/10'
                 }`}
                 aria-pressed={lang === l}
@@ -58,7 +59,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1.5 bg-verde hover:bg-verde-700 transition-colors text-white font-semibold px-4 py-2 rounded-xl text-sm"
           >
-            WhatsApp <span aria-hidden>→</span>
+            {t.header.reservar} <span aria-hidden>→</span>
           </a>
         </div>
       </div>

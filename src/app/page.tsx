@@ -17,9 +17,9 @@ export default function Home() {
         <Hero />
         <InfoBar />
         <Historia />
-        <Reservas />
         <Destacados />
         <Carta />
+        <Reservas />
         <Footer />
       </div>
       <StickyReservaButton />

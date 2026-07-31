@@ -102,7 +102,7 @@ export const textos: Record<Lang, Textos> = {
       navContacto: 'Contacto',
     },
     hero: {
-      eyebrow: 'La Latina · Madrid · Desde 2014',
+      eyebrow: 'Taberna El Fogón · La Latina, Madrid · Desde 2014',
       badge: 'Taberna castellana en La Latina',
       titulo: 'Cocina castellana',
       tituloAcento: 'en el corazón de La Latina',
@@ -184,7 +184,7 @@ export const textos: Record<Lang, Textos> = {
       titulo: 'Nuestra historia',
       parrafo:
         'Rocío y Jaime abrieron El Fogón hace doce años con una idea sencilla: cocinar como se cocinaba en las casas de Castilla, sin atajos. Ella lleva la sala y conoce a la mitad del barrio por su nombre; él no ha salido de la cocina desde el primer día. Entre los dos han convertido recetas de sus abuelas en la carta que ves hoy, con algún toque propio que nunca dejan de pulir. Para ellos, una taberna castellana de verdad se reconoce por el guiso, no por la decoración.',
-      pie: 'Rocío y Jaime, en la puerta de El Fogón',
+      pie: 'Rocío y Jaime, dueños de El Fogón',
     },
     ubicacion: {
       eyebrow: 'Cómo llegar',
@@ -224,7 +224,7 @@ export const textos: Record<Lang, Textos> = {
       navContacto: 'Contact',
     },
     hero: {
-      eyebrow: 'La Latina · Madrid · Since 2014',
+      eyebrow: 'Taberna El Fogón · La Latina, Madrid · Since 2014',
       badge: 'Castilian tavern in La Latina',
       titulo: 'Castilian cooking',
       tituloAcento: 'in the heart of La Latina',
@@ -306,7 +306,7 @@ export const textos: Record<Lang, Textos> = {
       titulo: 'Our story',
       parrafo:
         "Rocío and Jaime opened El Fogón twelve years ago with a simple idea: cook the way it was cooked in Castilian homes, no shortcuts. She runs the dining room and knows half the neighborhood by name; he hasn't left the kitchen since day one. Together they've turned their grandmothers' recipes into the menu you see today, adding their own touches they never stop refining. For them, a real Castilian tavern is judged by its stew, not its decor.",
-      pie: 'Rocío and Jaime, at the door of El Fogón',
+      pie: 'Rocío and Jaime, owners of El Fogón',
     },
     ubicacion: {
       eyebrow: 'How to find us',

@@ -11,11 +11,11 @@ export default function InfoBar() {
 
   return (
     <section id="ubicacion" className="border-b border-pizarra/10 scroll-mt-16">
-      <div className="max-w-5xl mx-auto px-4 py-10 md:py-14">
+      <div className="max-w-5xl mx-auto px-4 md:px-8 py-10 md:py-14">
         {/* dirección · horario · contacto, las tres de un vistazo bajo el hero */}
         <div className="grid gap-8 md:gap-10 md:grid-cols-3 md:divide-x md:divide-pizarra/10">
           <div className="md:pr-10">
-            <p className="font-mono uppercase tracking-[0.2em] text-xs text-almagre">
+            <p className="uppercase tracking-[0.2em] text-xs text-almagre">
               {t.ubicacion.direccionLabel}
             </p>
             <p className="mt-3 text-pizarra">{t.ubicacion.direccion}</p>
@@ -30,10 +30,10 @@ export default function InfoBar() {
           </div>
 
           <div className="md:px-10">
-            <p className="font-mono uppercase tracking-[0.2em] text-xs text-almagre">
+            <p className="uppercase tracking-[0.2em] text-xs text-almagre">
               {t.ubicacion.horarioLabel}
             </p>
-            <dl className="mt-3 font-mono text-sm">
+            <dl className="mt-3 text-sm tabular-nums">
               {t.ubicacion.horario.map((row) => (
                 <div
                   key={row.dias}
@@ -49,7 +49,7 @@ export default function InfoBar() {
           </div>
 
           <div className="md:pl-10">
-            <p className="font-mono uppercase tracking-[0.2em] text-xs text-almagre">
+            <p className="uppercase tracking-[0.2em] text-xs text-almagre">
               {t.ubicacion.contactoLabel}
             </p>
             <a
@@ -71,7 +71,7 @@ export default function InfoBar() {
           href={NEGOCIO.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-10 block relative w-full aspect-[16/6] rounded-2xl overflow-hidden border border-barra"
+          className="mt-10 block relative w-full aspect-[16/6] md:aspect-[16/3] rounded-2xl overflow-hidden border border-barra"
         >
           <Image
             src="/images/mapa-taberna.svg"
